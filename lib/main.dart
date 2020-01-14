@@ -66,7 +66,7 @@ class _CalculadoraIMCState extends State<CalculadoraIMC> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.refresh),
+            icon: Icon(Icons.refresh, color: Colors.orange,),
             onPressed: () {
               clear();
             },
