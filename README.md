@@ -11,7 +11,7 @@ A seguir como é feito o cálculo, segundo o site programasaudefacil.com.br:
 
 O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
 
-Interpretação do IMC
+<b>Interpretação do IMC</b><br>
 IMC	Classificação	Obesidade (grau)
 MENOR QUE 18,5	MAGREZA	0
 ENTRE 18,5 E 24,9	NORMAL	0
@@ -20,11 +20,9 @@ ENTRE 25,0 E 29,9	SOBREPESO	I
 ENTRE 30,0 E 39,9	OBESIDADE	II
 MAIOR QUE 40,0	OBESIDADE GRAVE	III
 Informações da tabela obtidas atrás do site: programasaudefacil.com.br.
-
-Explicação Código
-Variáveis
+<b>Explicação Código</b>
+<b>Variáveis</b>
 Agora terá explicação das variáveis utilizadas.
-
 TextEditingController _weightController = TextEditingController(): variável controladora atrelada ao TexFormField, para pegar o valor digitado n campo de Peso(Kg).
 TextEditingController _heightController = TextEditingController(): variável controladora atrelada ao TexFormField, para pegar o valor digitado n campo de Altura(cm).
 String _info = "Digite suas informações !": variável do tipo string que irá cuidar da mensagem apartir das informações digitadas pelo usuário.
@@ -32,15 +30,13 @@ GlobalKey<FormState> _formKey = GlobalKey<FormState>(): uma Key para atrelar ao 
 double weight = double.parse(_weightController.text): variável do tipo double para transformar o texto pego pelo controller _weightController em um tipo double.
 double height = double.parse(_heightController.text) / 100: variável do tipo double para transformar o texto pego pelo controller _heightController em um tipo double e dividir por 100 já que o valor é pego em metros eé necessário a conversão para centímetros.
 double imc = weight / (height * height): variável double que fará a parte da equação explicada anteriormente.
-Métodos
+<b>Métodos</b>
 Agora terá explicação dos métodos utilizados para controle do aplicativo.
-
-Método de resetear:
+Método de resetar:
 
 void _reset() {
     _weightController.text = "";
     _heightController.text = "";
-
     setState(() {
       _formKey = GlobalKey<FormState>();
       _info = "Digite suas Informações";
@@ -87,9 +83,10 @@ Column: utilizado para o posicionamento dos elementos na tela.
 TextFormField: utilizado para fazer os input.
 Container: utilizado para dar espaçamento ao botão Calcular.
 Raised Button: utilizado para o botão calcular e atribuir função a ele.
-Text: utilizado para o txto das informações abaixo do botão calcular.
-Print da Aplicação
-Agora será mostrado como ficou a aplicação, utilizando layout passado pelo professor Daniel:
+Text: utilizado para o txto das informações abaixo do botão calcular.<br>
+Print da Aplicação <br>
+Agora será mostrado como ficou a aplicação, utilizando layout passado pelo professor Daniel:<br>
+![GitHub Logo](/imcapp.gif)  
 
 
 
